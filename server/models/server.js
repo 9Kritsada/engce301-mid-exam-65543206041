@@ -7,8 +7,8 @@ const fs = require('fs');
 require('dotenv').config();
 
 console.log(process.env.APP_NAME);
-console.log(process.env.API_URL); 
-console.log(process.env.PORT); 
+console.log(process.env.API_URL);
+console.log(process.env.PORT);
 
 class Server {
   constructor() {
@@ -17,7 +17,8 @@ class Server {
       this.key = "server.key";
       this.cert = "server.crt";
     }
-    else{
+    else
+    if (rocess.env.NODE_ENV == "production"){
       this.key = "/etc/ssl/server.key";
       this.cert = "/etc/ssl/server.crt";
     }
