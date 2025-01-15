@@ -18,7 +18,7 @@ class Server {
       this.cert = "server.crt";
     }
     else
-    if (rocess.env.NODE_ENV == "production"){
+    if (process.env.NODE_ENV == "production"){
       this.key = "/etc/ssl/server.key";
       this.cert = "/etc/ssl/server.crt";
     }
